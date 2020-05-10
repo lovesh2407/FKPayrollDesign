@@ -1,3 +1,6 @@
+import java.sql.*; 
+
+
 enum ModeOfPayment{
 	MAIL, HOLD, DEPOSIT;
 }
@@ -6,12 +9,14 @@ public class Employee{
 	String name;
 	int employeeId;
 	String postalAddress;
-	String bankAccount; //// could  be another class
+	int bankAccount; //// could  be another class
 	Member union_member;
 
 	ModeOfPayment mode;   
 
-	Employee(int id, String name, String address, String account, Member member){
+	public static idCount = 0;
+
+	Employee(int id, String name, String address, int account, Member member){
 		employeeId = id;
 		this.name = name;
 		postalAddress = address;
@@ -35,7 +40,7 @@ public class Employee{
 		postalAddress = address;
 	}
 
-	public String getBankAccount(){
+	public int getBankAccount(){
 		return bankAccount;
 	}
 
@@ -55,5 +60,23 @@ public class Employee{
 		union_member.chargeService(charge);
 	}
 
+	public static void addEmployee(Connection conn){
+		Scanner sc= new Scanner(System.in);
+		System.out.println("please Enter Details");
+		System.out.println("Name?");
+
+		String name = sc.nextLine();
+
+		System.out.println("Postal Address?");
+		String address = sc.nextLine();
+
+		System.out.println("Bank Account Number?");
+		int account = sc.nextInt();
+
+		Member member = Member.membership();
+
+		System.out.println("please Enter Details");
+
+	}
 
 }

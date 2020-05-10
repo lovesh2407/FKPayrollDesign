@@ -2,7 +2,7 @@ public class EmployeeByHour extends Employee{
 	int hourlyRate;
 	int toBePaid;
 
-	EmployeeByHour(int id, String name, String address, String account, Member member){
+	EmployeeByHour(int id, String name, String address, int account, Member member){
 		super(id, name, address, account, member);
 	}
 

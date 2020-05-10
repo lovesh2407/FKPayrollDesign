@@ -2,7 +2,7 @@ public class EmployeeBySale extends Employee{
 	int commissionRate;
 	int toBePaid;
 
-	EmployeeBySale(int id, String name, String address, String account, Member member){
+	EmployeeBySale(int id, String name, String address, int account, Member member){
 		super(id, name, address, account, member);
 	}
 

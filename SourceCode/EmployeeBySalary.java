@@ -1,7 +1,7 @@
 public class EmployeeBySalary extends Employee{
 	int salary;
 
-	EmployeeBySalary(int id, String name, String address, String account, Member member){
+	EmployeeBySalary(int id, String name, String address, int account, Member member){
 		super(id, name, address, account, member);
 	}
 
